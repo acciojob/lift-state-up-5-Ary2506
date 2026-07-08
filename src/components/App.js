@@ -1,13 +1,22 @@
+import React, { useState } from "react";
+import Login from "./Login";
 
-import React from "react";
-import './../styles/App.css';
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-const App = () => {
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
   return (
     <div>
-        {/* Do not remove the main div */}
+      {isLoggedIn ? (
+        <h1>You are logged in!</h1>
+      ) : (
+        <Login handleLogin={handleLogin} />
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
