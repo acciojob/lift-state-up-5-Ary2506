@@ -10,8 +10,10 @@ function App() {
 
   return (
     <div>
+      <h1>Parent Component</h1>
+
       {isLoggedIn ? (
-        <h1>You are logged in!</h1>
+        <h2>You are logged in!</h2>
       ) : (
         <Login handleLogin={handleLogin} />
       )}
